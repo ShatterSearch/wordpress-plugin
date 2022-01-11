@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://shattersearch.com
  * @since      1.0.0
  *
  * @package    Shatter_Search
@@ -19,7 +19,7 @@
  *
  * @package    Shatter_Search
  * @subpackage Shatter_Search/includes
- * @author     Your Name <email@example.com>
+ * @author     Naresh Chandranatha <nash@shattersearch.com>
  */
 class Shatter_Search_Loader {
 

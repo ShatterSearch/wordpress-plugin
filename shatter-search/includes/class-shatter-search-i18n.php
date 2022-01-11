@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       https://shattersearch.com
  * @since      1.0.0
  *
  * @package    Shatter_Search
@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    Shatter_Search
  * @subpackage Shatter_Search/includes
- * @author     Your Name <email@example.com>
+ * @author     Naresh Chandranatha <nash@shattersearch.com>
  */
 class Shatter_Search_i18n {
 

@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       https://shattersearch.com
  * @since      1.0.0
  *
  * @package    Shatter_Search
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Shatter_Search
  * @subpackage Shatter_Search/includes
- * @author     Your Name <email@example.com>
+ * @author     Naresh Chandranatha <nash@shattersearch.com>
  */
 class Shatter_Search {
 

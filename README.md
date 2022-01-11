@@ -29,7 +29,7 @@ Contact Shatter Search support through our [Support Center](https://shattersearc
 This plugin is still in development.  Development roadmap:
 
 * ~Initial plugin setup~
-* Database setup
+* ~Database setup~
 * Auto Updating
 * Admin Dashboard
 * Shortcodes
