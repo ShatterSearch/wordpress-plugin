@@ -1,50 +1,131 @@
-# WordPress Plugin Boilerplate
+# Shatter Search
 
-A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+We offer web services for cannabis brands!
 
-## Contents
+👋 hello@shattersearch.com
+
+Our mission is to become a leading provider of web services & software created specifically for cannabis extract brands.
+
+### This plugin is intended for:
+Brands that manufacture cannabis extracts (vape pens, wax, shatter, solventless extracts, CBD products, etc)
+
+Dispensaries and delivery services that carry cannabis extract products
+
+### Why use this plugin?
+This plugin adds or enhances functionality on your website that helps connect your customers with the retailers that carry your products.
+
+You can build a relatively "dumb" website.  Let us handle the heavy lifting.
+
+We help curate photos of your products shared on social media by your customers and retailers.
+
+We syndicate information about your brand through our website, mobile apps, and social media channels.
+
+### Free Onboarding
+Getting started should be pretty easy, but we're here to help if you want a hand.
+
+Contact Shatter Search support through our [Support Center](https://shattersearch.com/support) or email help@shattersearch.com
+
+# All Implementation Options
+## Javascript Widget
+The JavaScript widget installs in minutes on just about any website.
+
+Generate a `<script>` tag through the [Business Control Panel](https://shattersearch.com/biz) and add it to your website.
+
+The widget is optimized for fast loading and is cached and served by a CDN.
+
+Data for the widget is served by the Shatter Search API upon page load and content is ***injected*** into your website.
+
+**JavaScript Widget Demo:** [Fake Cannabis Brand](https://fakecannabisbrand.xyz)
+
+The [widget documentation](https://fakecannabisbrand.xyz) provides more information on customization.
+
+## WordPress Plugin
+Rather than connecting to Shatter Search servers to fetch this data, the plugin stores a local copy of the data pertaining to your store locator and product drops.
+
+The content is served by your WordPress website and included directly in the page's HTML - which may have a positive impact on Search Engine Optimization.
+
+## Shatter Search Website Builder
+Let us take the wheel.
+
+We have a full-featured website builder for cannabis extract brands on the way.
+
+Contact us for early access to the beta at a discounted rate - help@shattersearch.com
+
+## Shatter Search API
+API access is available upon request and allows you to build out custom implementations.
+
+# Features
+
+### Enhanced Store Locator
+* Manage your list of retailers through our [Brand Control Panel on ShatterSearch](https://shattersearch.com/register)
+* We keep your retailer information up-to-date  (logo, phone number, website, social media, etc)
+* Display photos of recent extracts available at your retailers
+* Shatter Search staff will add photos from social media channels when possible
+* Our widget (optionally) puts this information in a "bubble" on every page of your website.
+* Your store locator is syndicated on [our website](https://shattersearch.com) and mobile apps.
+
+### Drops Publication
+* Build hype around your "product drops"
+* Let your customers know **what products** are available **where**
+* Optionally attach photos to each product drop
+* Allow your customers to subscribe to notifications of new product drops
+* Our widget (optionally) puts this information in a "bubble" on every page of your website.
+* Your product drops are syndicated on [our website](https://shattersearch.com) and mobile apps.
+
+### Product Photos
+* Display photos and videos of recent extracts that you've produced
+* Optionally tag the retailer they were distributed to
+* Optionally, we can help curate photos from social media (when possible)
+
+
+### The Bubble
+* Gives your customers easy access to a list of retailers and product drops in a "bubble".
+* Displayed on every page of your website (or not, if you prefer)
+* Starts minimized and expands when clicked (by default)
+* Highly customizable
+
+### Shortcodes
+This plugin adds several shortcodes to your WordPress that allow you to add the above-mentioned features to your website.
+
+* `[ss-retailers]` - displays your store locator.
+* `[ss-states]` - optionally displays a list of states where your products are sold
+* `[ss-retailer-count]` - inserts the number of retailers that carry your product into the page
+* `[ss-drops]` - inserts a full list of recent product drops into the page
+* `[ss-photos]` - displays recent product photos.
+
+Further information about each shortcode and customization options are located in the plugin settings.
+
+# Subscription Features
+In some instances, the use of this WordPress plugin requires a subscription to a plan with Shatter Search.
+
+See the following pages for more information:
+
+[Shatter Search for Brands](https://biz.shattersearch.com/software-for-cannabis-extract-brands)
+
+[Shatter Search for Dispensaries](https://biz.shattersearch.com/software-for-dispensaries)
+
+# Contents
 
 The WordPress Plugin Boilerplate includes the following files:
 
 * `.gitignore`. Used to exclude certain files from the repository.
-* `CHANGELOG.md`. The list of changes to the core project.
 * `README.md`. The file that you’re currently reading.
-* A `plugin-name` directory that contains the source code - a fully executable WordPress plugin.
+* A `shatter-search` directory that contains the source code.
 
-## Features
+# Installation
+Copy the `shatter-search` folder into your `wp-contents/plugins` folder or install it through the Plugins section of your WordPress Admin Dashboard.
 
-* The Boilerplate is based on the [Plugin API](http://codex.wordpress.org/Plugin_API), [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards), and [Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/).
-* All classes, functions, and variables are documented so that you know what you need to change.
-* The Boilerplate uses a strict file organization scheme that corresponds both to the WordPress Plugin Repository structure, and that makes it easy to organize the files that compose the plugin.
-* The project includes a `.pot` file as a starting point for internationalization.
+Once it's installed, activate the plugin through the admin dashboard.
 
-## Installation
+# Important Notes
 
-The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs. For example, if your plugin is named 'example-me' then:
+The Shatter Search WordPress Plugin was built on top of the [WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate)! It saved us a great deal of time during development and ensures that the plugin is easy to maintain going forward.
 
-* rename files from `plugin-name` to `example-me`
-* change `plugin_name` to `example_me`
-* change `plugin-name` to `example-me`
-* change `Plugin_Name` to `Example_Me`
-* change `PLUGIN_NAME_` to `EXAMPLE_ME_`
+If you have some PHP knowledge and have an interest in developing WordPress plugins, we recommend [starting here](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate).
 
-It's safe to activate the plugin at this point. Because the Boilerplate has no real functionality there will be no menu items, meta boxes, or custom post types added until you write the code.
+We greatly appreciate the contributions of the people listed below and the Open Source Community at large.
 
-## WordPress.org Preparation
-
-The original launch of this version of the boilerplate included the folder structure needed for using your plugin on WordPress.org. That folder structure has been moved to its own repo here: https://github.com/DevinVinson/Plugin-Directory-Boilerplate
-
-## Recommended Tools
-
-### i18n Tools
-
-The WordPress Plugin Boilerplate uses a variable to store the text domain used when internationalizing strings throughout the Boilerplate. To take advantage of this method, there are tools that are recommended for providing correct, translatable files:
-
-* [Poedit](http://www.poedit.net/)
-* [makepot](http://i18n.svn.wordpress.org/tools/trunk/)
-* [i18n](https://github.com/grappler/i18n)
-
-Any of the above tools should provide you with the proper tooling to internationalize the plugin.
+We publish a list of Open Source Software that we use in our [Terms of Service](https://shattersearch.com/legal/terms-of-service)
 
 ## License
 
@@ -58,42 +139,21 @@ The WordPress Plugin Boilerplate is licensed under the GPL v2 or later.
 
 A copy of the license is included in the root of the plugin’s directory. The file is named `LICENSE`.
 
-## Important Notes
-
 ### Licensing
 
 The WordPress Plugin Boilerplate is licensed under the GPL v2 or later; however, if you opt to use third-party code that is not compatible with v2, then you may need to switch to using code that is GPL v3 compatible.
 
 For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04/licensing-note-apache-and-gpl/) that covers the Apache 2.0 License used by [Bootstrap](http://twitter.github.io/bootstrap/).
 
-### Includes
+### Credits
 
-Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
-
-* `plugin-name/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
-* `plugin-name/admin` is for all admin-specific functionality
-* `plugin-name/public` is for all public-facing functionality
-
-Note that previous versions of the Boilerplate did not include `Plugin_Name_Loader` but this class is used to register all filters and actions with WordPress.
-
-The example code provided shows how to register your hooks with the Loader class.
-
-### What About Other Features?
-
-The previous version of the WordPress Plugin Boilerplate included support for a number of different projects such as the [GitHub Updater](https://github.com/afragen/github-updater).
-
-These tools are not part of the core of this Boilerplate, as I see them as being additions, forks, or other contributions to the Boilerplate.
-
-The same is true of using tools like Grunt, Composer, etc. These are all fantastic tools, but not everyone uses them. In order to  keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage.
-
-# Credits
 
 The WordPress Plugin Boilerplate was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
 
 The current version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
 
-The homepage is based on a design as provided by [HTML5Up](http://html5up.net), the Boilerplate logo was designed by Rob McCaskill of [BungaWeb](http://bungaweb.com), and the site `favicon` was created by [Mickey Kay](https://twitter.com/McGuive7).
-
-## Documentation, FAQs, and More
-
-If you’re interested in writing any documentation or creating tutorials please [let me know](http://devinvinson.com/contact/) .
+# Terms of Service / Privacy Policy
+* [Terms of Service](https://shattersearch.com/legal/terms-of-service)
+* [Privacy Policy](https://shattersearch.com/legal/privacy-policy)
+* [Refund Policy](https://shattersearch.com/legal/refund-policy)
+* [Community Guidelines](https://shattersearch.com/legal/community-guidelines)
