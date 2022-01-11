@@ -25,6 +25,21 @@ Getting started should be pretty easy, but we're here to help if you want a hand
 
 Contact Shatter Search support through our [Support Center](https://shattersearch.com/support) or email help@shattersearch.com
 
+### In Development
+This plugin is still in development.  Development roadmap:
+
+* ~Initial plugin setup~
+* Database setup
+* Auto Updating
+* Admin Dashboard
+* Shortcodes
+* Cronjob
+* Bubble Implementation
+* Product Drops
+* Store Locator
+* Product Photos
+* Wordpress Plugin Submission
+
 # All Implementation Options
 ## Javascript Widget
 The JavaScript widget installs in minutes on just about any website.
