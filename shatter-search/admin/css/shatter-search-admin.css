@@ -2,13 +2,17 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap');
+ @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 
+.ss-wrap * {
+    box-sizing: border-box;
+}
 .ss-header{
     background: #6f42c1;
     margin-top: 15px;
-    margin-right:10px;
     border-radius: 0.25rem;
+    margin-bottom: 2rem;
     padding:2rem;
     display:flex;
     align-items:center;
@@ -38,24 +42,61 @@
     display:block;
     margin-top:5px;
 }
-.ss-cols{
-    display:flex;
-    margin-top: 25px;
-    align-items: top;
-}
-.ss-cols .ss-left{
-    width: 30%;
-    padding:0px;
-}
-.ss-cols .ss-right{
-    width: 100%;
-    padding:0 0 0 3rem;
-}
 .ss-card{
-    padding: 15px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     line-height: 1;
     background: #fff;
     border-radius: 0.25rem;
+}
+
+.ss-card a{
+    color:#6f42c1;
+    text-decoration: none;
+    font-weight:500;
+}
+
+.ss-card a:hover{
+    color:#462583;
+    text-decoration: underline;
+}
+
+.ss-card p:not(.ss-card .ss-well p){
+    margin: 0 0 .5rem 0;
+}
+
+.ss-card h3{
+    margin:0px;
+    padding:0px;
+    color:#6f42c1;
+    font-size:1.5rem;
+    line-height: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.ss-well p{
+    margin:0px;
+    padding:0px;
+    font-size: 1.1rem;
+}
+.ss-well p b{
+    color: #6f42c1;
+}
+.ss-well{
+    background:#f0f0f1;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    display:flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: top;
+}
+.ss-well-icon{
+    margin-right:1.5rem;
+    color: #6f42c1;
+}
+.ss-card.faded{
+    background: rgba(255, 255, 255, 0.8);
 }
 @media only screen and (min-width: 992px) {
     .ss-header img{
@@ -64,4 +105,158 @@
     .ss-header h1{
         font-size: 3rem;
     }
+    .ss-well{
+        align-items: center;
+    }
+    .ss-cols{
+        display:flex !important;
+        align-items: start;
+    }
+
+    .ss-cols .ss-left{
+        width: 25%;
+        padding:0px;
+    }
+    .ss-cols .ss-right{
+        width: 100%;
+        padding:0 0 0 2rem;
+    }
+    .ss-card form .ss-cols{
+        align-items: stretch;
+    }
+}
+
+.ss-wrap input::placeholder { 
+    color: rgb(179, 178, 178);
+    opacity: 1; /* Firefox */
+}
+.ss-wrap input:-ms-input-placeholder {
+    color: rgb(179, 178, 178);
+}
+.ss-wrap input::-ms-input-placeholder {
+    color: rgb(179, 178, 178);
+}
+
+ul.ss-links{
+    padding:0px;
+    margin: 0px;
+}
+.ss-links li{
+    font-size: .8rem;
+    line-height: 1;
+}
+.ss-links li a{
+    display:flex;
+    align-items:center;
+    background: #fff;
+    border-radius: 0.25rem;
+    margin: 0px 0px .3rem 0px;
+    color: #6f42c1;
+    text-decoration: none;
+    margin:0px;
+}
+.ss-links li a span{
+    padding: .7rem;
+    margin-right:1rem;
+    border-right: 1px solid #ddd;
+}
+
+.ss-links li.purple a span{
+    border-right: 1px solid #734cbb;
+}
+
+.ss-links li.purple a:hover span{
+    border-right: 1px solid #7851c1;
+}
+
+.ss-links li.purple a{
+    color: #fff;
+}
+
+.ss-links li:not(.purple) a:hover{
+    background: #ebe3f9;
+}
+
+.ss-links li:not(.purple) a:hover span{
+    border-right-color: #c3adeb;
+}
+
+.ss-links li.purple a{
+    background: #6f42c1;
+}
+
+.ss-links li.purple a:hover{
+    background: #8153d8;
+}
+
+.ss-bold{
+    font-weight: bold;
+}
+.ss-mt-2{
+    margin-top: 1.5rem;
+}
+.ss-p-2{
+    padding: 1.5rem;
+}
+.ss-mb-0{
+    margin-bottom:0;
+}
+.ss-p-3{
+    padding:2rem;
+}
+
+.ss-pt-3{
+    padding-top: 2rem;
+}
+.ss-px-3{
+    padding-left:2rem;
+    padding-right:2rem;
+}
+.ss-card form{
+    margin:1rem 0 0 0;
+    border: 1px solid #ededed;
+    border-radius: 0.25rem;
+}
+.ss-cols{
+    display: block;
+}
+.ss-card form .ss-cols .ss-left{
+    background: #f7f7f7;
+}
+
+.ss-card form .ss-cols:not(:first-child){
+    border-top: 1px solid #ededed;
+}
+
+.ss-card form .ss-cols .ss-left small{
+    display:block;
+    margin-top: .5rem;
+    line-height: 1.5;
+    width: 90%;
+}
+.ss-card form .ss-cols .ss-right input{
+    width: 60%;
+}
+.ss-card form .ss-cols .ss-right{
+    width: 100% !important;
+}
+
+.ss-card form .ss-cols .ss-right,
+.ss-card form .ss-cols .ss-left {
+    padding: 1.2rem;
+    display:flex;
+    align-items: center;
+}
+
+button.button-purple{
+    background: #6f42c1 !important;
+    color: #fff !important;
+    border: none !important;
+    outline: none !important;
+    border: 1px solid #6f42c1 !important;
+}
+
+button.button-purple:hover{
+    background: #7851c1 !important;
+    border: 1px solid #7851c1 !important;
 }
