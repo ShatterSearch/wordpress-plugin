@@ -31,11 +31,12 @@ This plugin is still in development.  Development roadmap:
 * ~Initial plugin setup~
 * ~Database setup~
 * ~Design admin dashboard layout~
-* ~Design initial setup page~
-* Connect with Shatter Search API
 * Auto updating
+* ~Admin dashboard - Initial Setup~
 * Admin dashboard - Index
-* Admin dashboard - Shortcodes
+* Admin dashboard - Store Locator
+* Admin dashboard - Product Photos
+* Admin dashboard - Product Drops
 * Admin dashbaord - Options
 * Shortcodes
 * Cronjob

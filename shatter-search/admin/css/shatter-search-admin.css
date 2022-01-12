@@ -290,3 +290,8 @@ button.button-purple:hover{
     font-weight: 500;
     outline: none
 }
+.ss-danger{
+    font-weight:500;
+    font-size: 1.2rem;
+    color:#ff0000;
+}
