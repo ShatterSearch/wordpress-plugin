@@ -33,7 +33,7 @@ This plugin is still in development.  Development roadmap:
 * ~Design admin dashboard layout~
 * Auto updating
 * ~Admin dashboard - Initial Setup~
-* Admin dashboard - Index
+* ~Admin dashboard - Index~
 * Admin dashboard - Store Locator
 * Admin dashboard - Product Photos
 * Admin dashboard - Product Drops

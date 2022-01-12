@@ -66,7 +66,7 @@ function left(){
 }
 function right(){
     return '
-        <div class="ss-card faded ss-px-3">
+        <div class="ss-card faded ss-px-4">
             photos
         </div>
     ';

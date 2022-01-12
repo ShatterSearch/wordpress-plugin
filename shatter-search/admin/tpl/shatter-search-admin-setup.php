@@ -76,7 +76,7 @@ function right(){
                     You\'ll need to add your brand\'s <b>Shatter Search API Key</b> to get started.
                 </p>
             </div>
-            <div class="ss-px-3 ss-pt-2">
+            <div class="ss-px-4 ss-pt-2">
                 ' . (!empty($tryAgain) ? 
                     '<p class="ss-danger">Please try again</p>'
                     : ''
