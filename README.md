@@ -30,15 +30,20 @@ This plugin is still in development.  Development roadmap:
 
 * ~Initial plugin setup~
 * ~Database setup~
-* Auto Updating
-* Admin Dashboard
+* ~Design admin dashboard layout~
+* ~Design initial setup page~
+* Connect with Shatter Search API
+* Auto updating
+* Admin dashboard - Index
+* Admin dashboard - Shortcodes
+* Admin dashbaord - Options
 * Shortcodes
 * Cronjob
-* Bubble Implementation
-* Product Drops
-* Store Locator
-* Product Photos
-* Wordpress Plugin Submission
+* Bubble implementation
+* Product drops
+* Store locator
+* Product photos
+* Wordpress Plugin submission
 
 # All Implementation Options
 ## Javascript Widget
