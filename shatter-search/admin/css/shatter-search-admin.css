@@ -2,3 +2,66 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,500&display=swap');
+
+.ss-header{
+    background: #6f42c1;
+    margin-top: 15px;
+    margin-right:10px;
+    border-radius: 0.25rem;
+    padding:2rem;
+    display:flex;
+    align-items:center;
+}
+.ss-header div{
+    width:100%;
+    margin-left: 2rem;
+}
+.ss-header h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:800;
+    font-size: 2rem;
+    display: block;
+    color: #fff;
+    margin:0px;
+    padding:0px;
+    line-height:1;
+    text-transform: uppercase;
+}
+.ss-header img{
+    width:15%;
+    margin-bottom: 6px;
+    height:auto;
+}
+.ss-header span{
+    color:#fff;
+    display:block;
+    margin-top:5px;
+}
+.ss-cols{
+    display:flex;
+    margin-top: 25px;
+    align-items: top;
+}
+.ss-cols .ss-left{
+    width: 30%;
+    padding:0px;
+}
+.ss-cols .ss-right{
+    width: 100%;
+    padding:0 0 0 3rem;
+}
+.ss-card{
+    padding: 15px;
+    line-height: 1;
+    background: #fff;
+    border-radius: 0.25rem;
+}
+@media only screen and (min-width: 992px) {
+    .ss-header img{
+        width:5%;
+    }
+    .ss-header h1{
+        font-size: 3rem;
+    }
+}
