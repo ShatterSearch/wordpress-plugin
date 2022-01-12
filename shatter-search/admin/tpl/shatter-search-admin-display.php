@@ -88,6 +88,7 @@
                             <div class="ss-left ss-bg-light">
                                 <div>
                                     <b>Private API Key:</b>
+                                    <small>Available in your brand or store dashboard under "Website"</small>
                                 </div>  
                             </div>
                             <div class="ss-right">

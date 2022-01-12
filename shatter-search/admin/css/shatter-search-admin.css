@@ -126,7 +126,8 @@
     }
 }
 
-.ss-wrap input::placeholder { 
+.ss-wrap input::placeholder {
+    font-weight:normal !important; 
     color: rgb(179, 178, 178);
     opacity: 1; /* Firefox */
 }
@@ -154,6 +155,11 @@ ul.ss-links{
     color: #6f42c1;
     text-decoration: none;
     margin:0px;
+}
+.ss-links li a:active, .ss-links li a:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 .ss-links li a span{
     padding: .7rem;
@@ -259,4 +265,12 @@ button.button-purple{
 button.button-purple:hover{
     background: #7851c1 !important;
     border: 1px solid #7851c1 !important;
+}
+.ss-wrap input[type=text]:focus,
+{
+    border: 3px solid #6f42c1;
+    box-shadow: none;
+    color:#6f42c1;
+    font-weight: 500;
+    outline: none
 }
