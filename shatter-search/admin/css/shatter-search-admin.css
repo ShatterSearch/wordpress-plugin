@@ -16,10 +16,15 @@
     padding:2rem;
     display:flex;
     align-items:center;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 .ss-header div{
     width:100%;
     margin-left: 2rem;
+}
+.ss-header span{
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
 }
 .ss-header h1{
     font-family: 'Montserrat', sans-serif;
@@ -83,7 +88,8 @@
     color: #6f42c1;
 }
 .ss-well{
-    background:#f0f0f1;
+    background:#e9e9e9;
+    
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
     display:flex;
@@ -96,7 +102,7 @@
     color: #6f42c1;
 }
 .ss-card.faded{
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6);
 }
 @media only screen and (min-width: 992px) {
     .ss-header img{
@@ -113,6 +119,9 @@
         align-items: start;
     }
 
+    .ss-card form{
+        width: 80%;
+    }
     .ss-cols .ss-left{
         width: 25%;
         padding:0px;
@@ -151,7 +160,7 @@ ul.ss-links{
     align-items:center;
     background: #fff;
     border-radius: 0.25rem;
-    margin: 0px 0px .3rem 0px;
+    margin: 0px 0px .5rem 0px;
     color: #6f42c1;
     text-decoration: none;
     margin:0px;
@@ -211,6 +220,10 @@ ul.ss-links{
     padding:2rem;
 }
 
+.ss-pt-2{
+    padding-top: 1.5rem;
+}
+
 .ss-pt-3{
     padding-top: 2rem;
 }
@@ -222,12 +235,13 @@ ul.ss-links{
     margin:1rem 0 0 0;
     border: 1px solid #ededed;
     border-radius: 0.25rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 .ss-cols{
     display: block;
 }
 .ss-card form .ss-cols .ss-left{
-    background: #f7f7f7;
+    background: #f0efef;
 }
 
 .ss-card form .ss-cols:not(:first-child){
@@ -244,6 +258,8 @@ ul.ss-links{
     width: 60%;
 }
 .ss-card form .ss-cols .ss-right{
+    background: #f8f8f8;
+
     width: 100% !important;
 }
 
@@ -266,7 +282,7 @@ button.button-purple:hover{
     background: #7851c1 !important;
     border: 1px solid #7851c1 !important;
 }
-.ss-wrap input[type=text]:focus,
+.ss-wrap input[type=text]:focus
 {
     border: 3px solid #6f42c1;
     box-shadow: none;

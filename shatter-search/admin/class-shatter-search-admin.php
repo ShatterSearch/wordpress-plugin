@@ -102,8 +102,13 @@ class Shatter_Search_Admin {
 	 */
 	public function shatter_search_options()
 	{
-		require_once plugin_dir_path( __FILE__ ) . 'tpl/shatter-search-admin-display.php';
-		
+		if(!empty($_GET['action'])){
+			if($_GET['action'] == 'test'){
+				require_once plugin_dir_path( __FILE__ ) . 'tpl/shatter-search-admin-test-display.php';
+			}
+		}else{
+			require_once plugin_dir_path( __FILE__ ) . 'tpl/shatter-search-admin-display.php';
+		}	
 		
 	}
 	

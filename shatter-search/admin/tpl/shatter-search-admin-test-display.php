@@ -83,7 +83,7 @@
                         You'll need to add your brand's <b>Shatter Search API Key</b> to get started.
                     </p>
                 </div>
-                <div class="ss-px-3 ss-pt-2">
+                <div class="ss-px-3 ss-pt-3">
                     <form>
                         <div class="ss-cols">
                             <div class="ss-left ss-bg-light">
