@@ -35,10 +35,10 @@ This plugin is still in development.  Development roadmap:
 * ~Admin dashboard - Initial Setup~
 * ~Admin dashboard - Index~
 * ~Admin dashboard - Support~
-* Admin dashboard - Store Locator
-* Admin dashboard - Product Photos
-* Admin dashboard - Product Drops
-* Admin dashbaord - Options
+* ~Admin dashboard - Store Locator~
+* ~Admin dashboard - Product Photos~
+* ~Admin dashboard - Product Drops~
+* ~Admin dashbaord - Bubble~
 * Shortcodes
 * Cronjob
 * Bubble implementation

@@ -64,35 +64,25 @@ function left(){
         </ul>
     ';
 }
-function right(){
+function right($imgPath){
     return '
         <div class="ss-card faded ">
-            <h3>Product Drops</h3>
+            <h3>The Bubble</h3>
             <div class="ss-px-4">
-                ' . (!empty($tryAgain) ? 
-                    '<p class="ss-danger">Please try again</p>'
-                    : ''
-                ) . '
-                <form action="" method="post">
-                    <input type="hidden" name="action" value="initial_setup">
-                    <div class="ss-cols">
-                        <div class="ss-left ss-bg-light">
-                            <div>
-                                <b>Add This Shortcode:</b>
-                                <small>Create a page for your store locator and add this shortcode to the body.</small>
-                            </div>  
-                        </div>
-                        <div class="ss-right">
-                            <span style="font-weight: 700; background:#efefef; padding:6px; border-radius: 0.25rem;">
-                                [ss-product-drops]
-                            </span>
-                        </div>
-                    </div>
-                </form>
-                <p class="ss-pt-2">
-                    We will add customization options for this shortcode in the future.
+                <p class="ss-mt-2">
+                    <b>"The Bubble"</b> puts your retailers and product drops on every page of your website.
                 </p>
-                <a class="button button-purple" href="https://app.shattersearch.com/biz"><i class="fas fa-tachometer-alt"></i> &nbsp;Manage Your Drops</a>
+                <p class="ss-mt-2" style="background: #ffc107; padding:6px; display:inline-block; font-weight:500; border-radius: 0.25rem;">
+                    You can view an example of The Bubble on our demo site - <a href="https://fakecannabisbrand.xyz" style="color:black; font-weight:700;">Fake Cannabis Brand</a>.
+                </p>
+                <p class="ss-mt-2">
+                    The Bubble works on both desktop browsers and mobile devices and is displayed on the bottom of the screen.
+                    By default, The Bubble is minimized and expands when clicked.
+                </p>
+                <p class="ss-mt-2">
+                    Customization options for The Bubble are coming soon.
+                </p>
+                <img src="' .  $imgPath . '/bubble.png" class="ss-preview-image">
             </div>
         </div>
     ';
@@ -100,5 +90,5 @@ function right(){
 
 $templateFile = file_get_contents(plugin_dir_path( dirname( __FILE__ ) ) . 'partials/layout.tpl.php');
 $template = str_replace('{left}', left(), $templateFile);
-$template = str_replace('{right}', right(), $template);
+$template = str_replace('{right}', right($imgPath), $template);
 print $template;

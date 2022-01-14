@@ -28,7 +28,7 @@ function left(){
             </li>
             <li>
                 <a
-                    href="https://shattersearch.com"
+                    href="https://biz.shattersearch.com/software-for-cannabis-extract-brands"
                     target="_blank"
                 >
                     <span>
@@ -40,7 +40,7 @@ function left(){
 
             <li>
                 <a
-                    href="https://shattersearch.com"
+                    href="https://biz.shattersearch.com/software-for-dispensaries"
                     target="_blank"
                 >
                     <span>
@@ -66,8 +66,34 @@ function left(){
 }
 function right(){
     return '
-        <div class="ss-card faded ss-px-4">
-            photos
+        <div class="ss-card faded ">
+            <h3>Product Photos</h3>
+            <div class="ss-px-4">
+                ' . (!empty($tryAgain) ? 
+                    '<p class="ss-danger">Please try again</p>'
+                    : ''
+                ) . '
+                <form action="" method="post">
+                    <input type="hidden" name="action" value="initial_setup">
+                    <div class="ss-cols">
+                        <div class="ss-left ss-bg-light">
+                            <div>
+                                <b>Add This Shortcode:</b>
+                                <small>Create a page for your store locator and add this shortcode to the body.</small>
+                            </div>  
+                        </div>
+                        <div class="ss-right">
+                            <span style="font-weight: 700; background:#efefef; padding:6px; border-radius: 0.25rem;">
+                                [ss-product-photos]
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <p class="ss-pt-2">
+                    We will add customization options for this shortcode in the future.
+                </p>
+                <a class="button button-purple" href="https://app.shattersearch.com/biz"><i class="fas fa-tachometer-alt"></i> &nbsp;Manage Your Photos</a>
+            </div>
         </div>
     ';
 }

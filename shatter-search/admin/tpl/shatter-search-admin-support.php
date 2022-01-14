@@ -74,7 +74,7 @@ function right(){
                 </p>
                 <ul class="ss-mt-3 ss-w-100 ss-w-lg-75 ">
                     <li class="ss-mb-0">
-                        <a class="ss-link-unstyled" href="mailto:help@shattersearch.com">
+                        <a target="_blank" class="ss-link-unstyled" href="mailto:help@shattersearch.com">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -87,7 +87,7 @@ function right(){
                         </a>
                     </li>
                     <li class="ss-mt-3 ss-mb-0">
-                        <a class="ss-link-unstyled" href="https://shattersearch.com/support/tickets">
+                        <a target="_blank" class="ss-link-unstyled" href="https://shattersearch.com/support/tickets">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -100,7 +100,7 @@ function right(){
                         </a>
                     </li>
                     <li class="ss-mt-3 ss-mb-0">
-                        <a class="ss-link-unstyled" href="https://shattersearch.com/support/chat">
+                        <a target="_blank" class="ss-link-unstyled" href="https://shattersearch.com/support/chat">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -113,7 +113,7 @@ function right(){
                         </a>
                     </li>
                     <li class="ss-mt-3 ss-mb-0">
-                        <a class="ss-link-unstyled" href="https://shattersearch.com/support/knowledgebase">
+                        <a target="_blank" class="ss-link-unstyled" href="https://shattersearch.com/support/knowledgebase">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
