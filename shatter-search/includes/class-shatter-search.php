@@ -39,6 +39,16 @@ class Shatter_Search {
 	 */
 	protected $loader;
 
+
+	/**
+	 * The updater that's responsible for updating the plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      SHATTER_SEARCH_UPDATER    $updater    Maintains database operations during plugin updates
+	 */
+	protected $updater;
+
 	/**
 	 * The unique identifier of this plugin.
 	 *
@@ -80,14 +90,16 @@ class Shatter_Search {
 		$this->define_public_hooks();
 
 		
-		add_action('plugins_loaded', array($this, 'check_version'));	
+		add_action('plugins_loaded', array($this, 'check_shatter_search_version'));	
 	}
 
-	public function check_version(){
+	public function check_shatter_search_version(){
 		$currentVersion = get_option('ss_version');
 		if(empty($currentVersion)){
 			update_option('ss_version', $this->version);
 		}else if (SHATTER_SEARCH_VERSION !== $currentVersion) {
+			$this->updater = new Shatter_Search_Updater();
+			$this->updater->update(SHATTER_SEARCH_VERSION, $this->version);
 			print 'version mismatch';
 			die();
 		}
