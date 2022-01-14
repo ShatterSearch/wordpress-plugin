@@ -84,7 +84,7 @@ function right(){
                         </div>
                         <div class="ss-right">
                             <span style="font-weight: 700; background:#efefef; padding:6px; border-radius: 0.25rem;">
-                                [ss-product-drops]
+                                [ss-drops]
                             </span>
                         </div>
                     </div>

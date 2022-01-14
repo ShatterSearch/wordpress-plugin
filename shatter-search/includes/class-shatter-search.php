@@ -96,8 +96,20 @@ class Shatter_Search {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
-		
+
 		add_action('plugins_loaded', array($this, 'check_shatter_search_version'));	
+	}
+
+	public function insert_bubble_footer(){
+		$config = [
+			'pluginVersion' => $this->version,
+			'apiKey' => (!empty(get_option('ss_api_key')) ? get_option('ss_api_key') : ''),
+			'selfHosted' => (!empty(get_option('ss_self_hosted')) ? get_option('ss_self_hosted') : 'false'),
+		];
+		if(!empty($config['apiKey'])){
+			echo '<div id="ssAPIKey" style="display: none;" data-version="' . $config['pluginVersion'] . '"  data-key="' . $config['apiKey'] . '" data-self-hosted="' . $config['selfHosted'] . '"></div>';
+		}
+		return;
 	}
 
 	public function check_shatter_search_version(){
@@ -135,6 +147,13 @@ class Shatter_Search {
 		 * core plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shatter-search-loader.php';
+
+
+		/**
+		 * The class responsible for defining all shortcodes used in the public-facing
+		 * side of the site.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shatter-search-shortcodes.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
@@ -205,7 +224,12 @@ class Shatter_Search {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action('wp_footer', $this, 'insert_bubble_footer');
 
+		add_shortcode('ss-retailers', array('Shatter_Search_Shortcodes', 'store_locator_shortcode'));
+		add_shortcode('ss-states', array('Shatter_Search_Shortcodes', 'states_shortcode'));
+		add_shortcode('ss-drops', array('Shatter_Search_Shortcodes', 'drops_shortcode'));
+		add_shortcode('ss-photos', array('Shatter_Search_Shortcodes', 'photos_shortcode'));
 	}
 
 	/**

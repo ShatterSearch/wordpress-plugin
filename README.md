@@ -39,9 +39,10 @@ This plugin is still in development.  Development roadmap:
 * ~Admin dashboard - Product Photos~
 * ~Admin dashboard - Product Drops~
 * ~Admin dashbaord - Bubble~
-* Shortcodes
-* Cronjob
-* Bubble implementation
+* ~Bubble implementation~
+* ~Temporary shortcode implementation~
+* Data Sync
+* Final Shortcodes
 * Product drops
 * Store locator
 * Product photos
