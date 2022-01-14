@@ -73,6 +73,8 @@ class Shatter_Search_Activator {
 		) $charset_collate;";
 		dbDelta($drop_items_sql);
 
+		update_option('ss_version', SHATTER_SEARCH_VERSION);
+
 	}
 
 }

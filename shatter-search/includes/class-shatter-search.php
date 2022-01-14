@@ -79,6 +79,18 @@ class Shatter_Search {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
+		
+		add_action('plugins_loaded', array($this, 'check_version'));	
+	}
+
+	public function check_version(){
+		$currentVersion = get_option('ss_version');
+		if(empty($currentVersion)){
+			update_option('ss_version', $this->version);
+		}else if (SHATTER_SEARCH_VERSION !== $currentVersion) {
+			print 'version mismatch';
+			die();
+		}
 	}
 
 	/**
