@@ -1,4 +1,5 @@
 <?php
+global $wpdb;
 
 /**
  * Provide a admin area view for the plugin
@@ -11,6 +12,34 @@
  * @package    Shatter_Search
  * @subpackage Shatter_Search/admin/tpl
  */
+// get wordpress option
+
+$stats = [];
+
+$stats['entity_type'] = $entityType = get_option('ss_entity_type');
+if(empty($entityType) || (!in_array($entityType, ['brand', 'store']))){
+    update_option('ss_api_key', '');
+    update_option('ss_secret_api_key', '');
+    update_option('ss_entity_type', '');
+    wp_redirect(admin_url('admin.php?page=manage-shatter-search-setup'));
+}elseif(!empty($entityType) && $entityType === 'brand'){
+    $stats['brand_name'] = get_option('ss_brand_name');
+    $stats['brand_id'] = get_option('ss_brand_id');
+    
+    $retailersTableName = $wpdb->base_prefix . "ss_retailers";
+    $retailersCount = $wpdb->get_var("SELECT COUNT(id) FROM $retailersTableName");
+    $stats['retailers_count'] = $retailersCount;
+}elseif(!empty($entityType) && $entityType === 'store'){
+    $stats['store_name'] = get_option('ss_store_name');
+    $stats['store_id'] = get_option('ss_store_id');
+}
+
+
+$dropsTableName = $wpdb->base_prefix . "ss_drops";
+$dropsCount = $wpdb->get_var("SELECT COUNT(id) FROM $dropsTableName");
+$stats['drops_count'] = $dropsCount;
+
+$stats['billing_status'] = get_option('ss_billing_status');
 function left(){
     return '
         <ul class="ss-links">
@@ -28,7 +57,7 @@ function left(){
             </li>
             <li>
                 <a
-                    href="https://shattersearch.com"
+                    href="https://biz.shattersearch.com/software-for-cannabis-extract-brands"
                     target="_blank"
                 >
                     <span>
@@ -40,7 +69,7 @@ function left(){
 
             <li>
                 <a
-                    href="https://shattersearch.com"
+                    href="https://biz.shattersearch.com/software-for-dispensaries"
                     target="_blank"
                 >
                     <span>
@@ -64,7 +93,7 @@ function left(){
         </ul>
     ';
 }
-function right(){
+function right($stats){
     return '
         <div class="ss-card faded ">
             <h3>Welcome!</h3>
@@ -184,23 +213,33 @@ function right(){
                 </div>
                 <div class="ss-table">
                     <div>API Status:</div>
-                    <div>Valid</div>
+                    <div>' . ucwords($stats['billing_status']) . '</div>
                 </div>
                 <div class="ss-table">
                     <div>Account Type:</div>
-                    <div>Brand</div>
+                    <div>' . ucwords($stats['entity_type']) . '</div>
                 </div>
-                <div class="ss-table">
+    ' .
+            ($stats['entity_type'] === 'brand' ?
+                '<div class="ss-table">
                     <div>Brand:</div>
-                    <div>Fake Lab (#131)</div>
+                    <div>' . $stats['brand_name'] . ' (' . $stats['brand_id'] . ')</div>
                 </div>
                 <div class="ss-table">
                     <div>Retailers:</div>
-                    <div>325</div>
-                </div>
+                    <div>' . $stats['retailers_count'] . '</div>
+                </div>'
+            :
+                '<div class="ss-table">
+                    <div>Store:</div>
+                    <div>' . $stats['store_name'] . ' (' . $stats['store_id'] . ')</div>
+                </div>'
+            ) .
+    '
+                
                 <div class="ss-table">
                     <div>Drops:</div>
-                    <div>3</div>
+                    <div>' . $stats['drops_count'] . '</div>
                 </div>
             </div>
         </div>
@@ -212,5 +251,5 @@ function right(){
 
 $templateFile = file_get_contents(plugin_dir_path( dirname( __FILE__ ) ) . 'partials/layout.tpl.php');
 $template = str_replace('{left}', left(), $templateFile);
-$template = str_replace('{right}', right(), $template);
+$template = str_replace('{right}', right($stats), $template);
 print $template;

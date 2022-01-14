@@ -132,6 +132,15 @@ class Shatter_Search_Admin {
 				array($this, 'shatter_search_product_photos' )
 			);
 
+			add_submenu_page(
+				'manage-shatter-search',
+				'Support',
+				'Support',
+				'manage_options',
+				'manage-shatter-search-support',
+				array($this, 'shatter_search_support' )
+			);
+
 		}
 		
 	}
@@ -160,6 +169,12 @@ class Shatter_Search_Admin {
 		return;
 	}
 
+	public function shatter_search_support(){
+		require_once plugin_dir_path( __FILE__ ) . 'tpl/shatter-search-admin-support.php';
+		return;
+	}
+	
+
 
 	
 	/**
@@ -181,7 +196,7 @@ class Shatter_Search_Admin {
 	public function admin_post_initial_setup(){
 		if(!empty($_POST['apiKey']) && !empty($_POST['secretApiKey'])){
 
-			$_POST['apiKey'] = trim(str_ireplace('SS', '', $_POST['apiKey']));
+			$_POST['apiKey'] = trim(str_ireplace(['SS-', 'SS-'], '', $_POST['apiKey']));
 			$_POST['secretApiKey'] = trim($_POST['secretApiKey']);
 
 			$postData = [
@@ -205,7 +220,23 @@ class Shatter_Search_Admin {
 						update_option('ss_entity_type', $response->entity);
 						update_option('ss_api_key', $postData['api_key']);
 						update_option('ss_secret_api_key', $postData['secret_api_key']);
-						print 'test';
+						
+						if(!empty($response->store_id)){
+							update_option('ss_store_id', $response->store_id);
+						}
+						if(!empty($response->store_name)){
+							update_option('ss_store_name', $response->store_name);
+						}
+						if(!empty($response->brand_id)){
+							update_option('ss_brand_id', $response->brand_id);
+						}
+						if(!empty($response->brand_name)){
+							update_option('ss_brand_name', $response->brand_name);
+						}
+						if(!empty($response->billing_status)){
+							update_option('ss_billing_status', $response->billing_status);
+						}
+
 						wp_redirect(admin_url('admin.php?page=manage-shatter-search&status=setup-complete'));
 						exit(); //always remember to add this after wp_redirect()
 
