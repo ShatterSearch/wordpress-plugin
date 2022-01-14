@@ -90,11 +90,10 @@ class Shatter_Search {
 
 		$this->cache_key = 'shatter_search';
 		$this->cache_allowed = false;
-		add_filter( 'plugins_api', array( $this, 'info' ), 20, 3 );
-		add_filter( 'site_transient_update_plugins', array( $this, 'update' ) );
-		add_action( 'upgrader_process_complete', array( $this, 'purge' ), 10, 2 );
 
-
+		if(empty(get_option('ss_update_checked')) || get_option('ss_update_checked') < time() - (60*60*2)){
+			$this->check_for_updates();
+		}
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,6 +102,13 @@ class Shatter_Search {
 
 		
 		add_action('plugins_loaded', array($this, 'check_shatter_search_version'));	
+	}
+	public function check_for_updates(){
+		add_filter( 'plugins_api', array( $this, 'info' ), 20, 3 );
+		add_filter( 'site_transient_update_plugins', array( $this, 'update' ) );
+		add_action( 'upgrader_process_complete', array( $this, 'purge' ), 10, 2 );
+		update_option('ss_update_checked', time());
+		return;
 	}
 
 	public function check_shatter_search_version(){
@@ -269,6 +275,7 @@ class Shatter_Search {
 				)
 			);
 
+
 			if(
 				is_wp_error( $remote )
 				|| 200 !== wp_remote_retrieve_response_code( $remote )
@@ -276,6 +283,7 @@ class Shatter_Search {
 			) {
 				return false;
 			}
+
 
 			set_transient( $this->cache_key, $remote, DAY_IN_SECONDS );
 
@@ -349,6 +357,7 @@ class Shatter_Search {
 
 		$remote = $this->request();
 
+		
 		if(
 			$remote
 			&& version_compare( $this->version, $remote->version, '<' )
