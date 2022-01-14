@@ -238,7 +238,7 @@ class Shatter_Search_Admin {
 		 */
 
 		wp_enqueue_script( $this->shatter_search, plugin_dir_url( __FILE__ ) . 'js/shatter-search-admin.js', array( 'jquery' ), $this->version, false );
-
+		
 	}
 
 }

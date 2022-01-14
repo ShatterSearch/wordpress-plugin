@@ -31,6 +31,7 @@ This plugin is still in development.  Development roadmap:
 * ~Initial plugin setup~
 * ~Database setup~
 * ~Design admin dashboard layout~
+* ~Plugin News~
 * Auto updating
 * ~Admin dashboard - Initial Setup~
 * ~Admin dashboard - Index~

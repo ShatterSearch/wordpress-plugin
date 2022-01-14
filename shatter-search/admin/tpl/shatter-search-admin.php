@@ -74,13 +74,11 @@ function right(){
                 <p class="ss-mt-2">
                     Please reach out to us through the <a href="https://shattersearch.com/support">Support Center</a> or email help@shattersearch.com if you require any assistance.
                 </p>
-                <div class="ss-news ss-mt-3">
+                <div id="ssNews" class="ss-d-none ss-news ss-mt-3">
                     <b>Latest News</b>:
-                    <a class="ss-d-block ss-mt-2" href="#">Plugin News Headline</a>
-                    <p class="ss-mb-2 ss-mt-2">
-                        Sunt ullamco elit enim ex irure in. Voluptate exercitation excepteur qui enim cillum quis in. Ea veniam aliquip tempor officia qui aute eu commodo adipisicing laboris ipsum minim. In irure consequat proident nostrud nulla occaecat velit dolore ad duis aute Lorem. Aute nostrud incididunt ut sit incididunt ut id excepteur laborum laborum exercitation irure eu.
-                    </p>
-                    <a href="#">Read More &nbsp;<i class="fas fa-arrow-right"></i></a>
+                    <a class="ss-d-block ss-mt-2" id="ssNewsLink" href=""></a>
+                    <p class="ss-mb-2 ss-mt-2" id="ssNewsBody"></p>
+                    <a id="ssNewsLink2" href="">Read More &nbsp;<i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -208,6 +206,7 @@ function right(){
         </div>
 
         <b class="ss-mt-3 ss-d-block" ><a class="ss-link-unstyled ss-text-purple" href="https://github.com/ShatterSearch/wordpress-plugin">README.md</a></b>
+        <script src="https://embed.shattersearch.com/scripts/wordpress-news.js"></script>
     ';
 }
 
