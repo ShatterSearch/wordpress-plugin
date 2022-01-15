@@ -1,4 +1,4 @@
-=== Shatter Search ===
+=== Shatter Search Cannabis Store Locator ===
 Contributors: shattersearch
 Tags: cannabis, store locator, product drops, cannabis brand, extracts
 Requires at least: 3.0.1
