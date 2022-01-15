@@ -87,6 +87,8 @@ class Shatter_Search_Sync
 						}
 					}
 				}
+
+				update_option('ss_updated_at', time());
 			}
 		}
 	}

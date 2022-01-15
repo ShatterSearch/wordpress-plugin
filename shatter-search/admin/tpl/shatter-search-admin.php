@@ -33,6 +33,10 @@ if(empty($entityType) || (!in_array($entityType, ['brand', 'store']))){
     $stats['store_name'] = get_option('ss_store_name');
     $stats['store_id'] = get_option('ss_store_id');
 }
+$stats['sync_time'] = get_option('ss_updated_at');
+if(!empty($stats['sync_time'])){
+    $stats['sync_time'] = date("F j, Y, g:i a", $stats['sync_time']);
+}
 
 
 $dropsTableName = $wpdb->base_prefix . "ss_drops";
@@ -209,7 +213,7 @@ function right($stats){
                 <p class="">This plugin maintains a list of your retailers and product drops.  This information is pulled from Shatter Search servers once an hour.</p>
                 <div class="ss-table">
                     <div>Last Updated:</div>
-                    <div>Janaury 12, 2022 at 12:33 PM</div>
+                    <div>' . $stats['sync_time']. '</div>
                 </div>
                 <div class="ss-table">
                     <div>API Status:</div>
@@ -241,6 +245,16 @@ function right($stats){
                     <div>Drops:</div>
                     <div>' . $stats['drops_count'] . '</div>
                 </div>
+
+                <form style="border:none; box-shadow:none;" action="' . admin_url('admin-post.php') . '" method="post">
+                    <input type="hidden" name="action" value="manual_sync">
+                    <button
+                        type="submit"
+                        class="button button-purple"
+                    >
+                        Manually Sync Data
+                    </button>
+                </form>
             </div>
         </div>
 

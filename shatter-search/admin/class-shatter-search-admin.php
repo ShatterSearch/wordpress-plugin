@@ -211,7 +211,12 @@ class Shatter_Search_Admin {
 		}
 		return;
 	}
-	
+	public function admin_post_manual_sync () {
+		$sync = new Shatter_Search_Sync($this->shatter_search, $this->version);
+		$sync->sync_plugin_data();
+		wp_redirect(admin_url('admin.php?page=manage-shatter-search&status=setup-complete'));
+		return;
+	}
 	public function admin_post_initial_setup(){
 		if(!empty($_POST['apiKey']) && !empty($_POST['secretApiKey'])){
 

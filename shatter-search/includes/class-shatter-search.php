@@ -217,6 +217,7 @@ class Shatter_Search {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'shatter_search_menu' );
 		$this->loader->add_action( 'admin_post_initial_setup', $plugin_admin, 'admin_post_initial_setup' );
+		$this->loader->add_action( 'admin_post_manual_sync', $plugin_admin, 'admin_post_manual_sync' );
 		
 	}
 

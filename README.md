@@ -46,7 +46,10 @@ This plugin is still in development.  Development roadmap:
 * ~Product drops~
 * ~Store locator~
 * ~Product photos~
-* Force data sync button
+* ~Manual data button~
+* ~Fix shortcode rendering~
+* Shortcode attributes
+* Troubleshooting (plugin reset)
 * General configuration options
 * Frequently Asked Questions
 * Wordpress Plugin submission

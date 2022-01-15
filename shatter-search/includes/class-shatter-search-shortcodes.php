@@ -45,49 +45,31 @@ class Shatter_Search_Shortcodes
 	}
 
     public static function store_locator_shortcode(){
-        $content = '<div id="ssRetailers"></div>';
         global $wpdb;
-
-		ob_start();
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-retailers-shortcode.php';
-        $content=ob_get_contents(); 
-        ob_end_clean();
-
-        return $content;
+        return store_locator_shortcode();
     }
 
     public static function states_shortcode(){
 		global $wpdb;
-		
-
-		ob_start();
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-states-shortcode.php';
-        $content=ob_get_contents(); 
-        ob_end_clean();
-
-        return $content;
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-states-shortcode.php';
+        return states_shortcode();
     }
 	
 
     public static function drops_shortcode(){
         global $wpdb;
-
-		ob_start();
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-drops-shortcode.php';
-        $content=ob_get_contents(); 
-        ob_end_clean();
-
-        return $content;
+        return drops_shortcode();
     }
 
-    public static function photos_shortcode(){
-		global $wpdb;
-
-		ob_start();
+    public static function photos_shortcode($atts = []){
+		$attributes = shortcode_atts(
+			array(
+				'num_photos' => '4',
+			), $atts
+		);
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-photos-shortcode.php';
-        $content=ob_get_contents(); 
-        ob_end_clean();
-
-        return $content;
+		return photo_shortcode($attributes);
     }
 }
