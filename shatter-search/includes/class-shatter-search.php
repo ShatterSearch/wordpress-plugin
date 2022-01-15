@@ -84,7 +84,7 @@ class Shatter_Search {
 		if ( defined( 'SHATTER_SEARCH_VERSION' ) ) {
 			$this->version = SHATTER_SEARCH_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->shatter_search = 'shatter-search';
 
@@ -120,8 +120,7 @@ class Shatter_Search {
 		}else if (SHATTER_SEARCH_VERSION !== $currentVersion) {
 			$this->updater = new Shatter_Search_Updater();
 			$this->updater->update(SHATTER_SEARCH_VERSION, $this->version);
-			print 'version mismatch';
-			die();
+			update_option('ss_version', $this->version);
 		}
 	}
 

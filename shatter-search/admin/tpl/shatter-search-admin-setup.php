@@ -107,10 +107,8 @@ function right(){
                     </div>
 
                     <div class="ss-cols">
-                        <div class="ss-left ss-bg-light">
-                            &nbsp;
-                        </div>
-                        <div class="ss-right">
+                        <div class="ss-right ">
+
                             <button
                                 type="submit"
                                 class="button button-purple"

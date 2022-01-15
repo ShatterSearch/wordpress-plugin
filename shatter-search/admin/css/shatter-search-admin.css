@@ -111,6 +111,9 @@
         width: 45% !important;
     }
 
+    .ss-md-block{
+        display: block !important;
+    }
     .ss-cols{
         display:flex !important;
         align-items: start;
@@ -254,8 +257,9 @@ ul.ss-links{
     padding:2rem !important;
 }
 .ss-d-none{
-    display: none !important;
+    display: none;
 }
+
 .ss-d-block{
     display: block !important;
 }
@@ -322,7 +326,7 @@ ul.ss-links{
     text-decoration: none !important;
     color: inherit;
 }
-.ss-card form .ss-cols:not(:first-child){
+.ss-card form .ss-cols:not(:first-of-type){
     border-top: 1px solid #ededed;
 }
 

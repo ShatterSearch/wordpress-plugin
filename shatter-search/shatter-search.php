@@ -16,7 +16,7 @@
  * Plugin Name:       Shatter Search For WordPress
  * Plugin URI:        http://biz.shattersearch.com/wordpress-plugin-for-cannabis-brands
  * Description:       Provides a store locator and product drops for cannabis extract brands
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Shatter Search
  * Author URI:        https://shattersearch.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'SHATTER_SEARCH_VERSION', '1.0.0' );
+define( 'SHATTER_SEARCH_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.

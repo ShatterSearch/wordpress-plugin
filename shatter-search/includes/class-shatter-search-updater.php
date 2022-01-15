@@ -23,19 +23,15 @@
 class Shatter_Search_Updater {
 
 	/**
-	 * Short Description. (use period)
+	 * Updates the plugin (use period)
 	 *
-	 * Long Description.
+	 * Handles the transition between numbered versions of the plugin..
 	 *
 	 * @since    1.0.0
 	 */
 	public function update($oldVersion, $newVersion) {
-		if($oldVersion === '1.0.0' && $newVersion === '1.0.1') {
+		/* if($oldVersion === '1.0.0' && $newVersion === '1.0.1') {
 			$this->updateOne();
-		}
-	}
-	public function updateOne(){
-		print 'updating!';
-		die();
+		} */
 	}
 }

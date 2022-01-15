@@ -270,7 +270,7 @@ function right($stats){
         </div>
 
         <b class="ss-mt-3 ss-d-block" ><a class="ss-link-unstyled ss-text-purple" href="https://github.com/ShatterSearch/wordpress-plugin">README.md</a></b>
-        <script src="https://embed.shattersearch.com/scripts/wordpress-news.js"></script>
+        <script src="https://embed.shattersearch.com/scripts/wordpress-news.js?date=' . strtotime(date("F j, Y")) . '"></script>
     ';
 }
 

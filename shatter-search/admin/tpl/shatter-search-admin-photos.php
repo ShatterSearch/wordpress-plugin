@@ -26,27 +26,46 @@ function left(){
                     ShatterSearch.com
                 </a>
             </li>
-            <li>
+            <li class="ss-mt-2">
                 <a
-                    href="https://biz.shattersearch.com/software-for-cannabis-extract-brands"
-                    target="_blank"
+                    href="' . admin_url('admin.php?page=manage-shatter-search') . '"
                 >
                     <span>
-                        <i class="fas fa-flask fa-fw"></i>
+                        <i class="fas fa-info-circle fa-fw"></i>
                     </span>
-                    For Extract Brands
+                    Plugin Info
                 </a>
             </li>
 
-            <li>
+            <li class="ss-mt-2">
                 <a
-                    href="https://biz.shattersearch.com/software-for-dispensaries"
-                    target="_blank"
+                    href="' . admin_url('admin.php?page=manage-shatter-search-bubble') . '"
                 >
                     <span>
-                        <i class="fas fa-shopping-cart fa-fw"></i>
+                        <i class="fas fa-cog fa-fw"></i>
                     </span>
-                    For Dispensaries
+                    The Bubble
+                </a>
+            </li>
+            <li class="ss-mt-2">
+                <a
+                    href="' . admin_url('admin.php?page=manage-shatter-search-store-locator') . '"
+                >
+                    <span>
+                        <i class="fas fa-map-marked-alt fa-fw"></i>
+                    </span>
+                    Store Locator
+                </a>
+            </li>
+
+            <li class="ss-mt-2">
+                <a
+                    href="' . admin_url('admin.php?page=manage-shatter-search-product-drops') . '"
+                >
+                    <span>
+                        <i class="fas fa-parachute-box fa-fw"></i>
+                    </span>
+                    Product Drops
                 </a>
             </li>
 
@@ -90,7 +109,7 @@ function right(){
                     </div>
                 </form>
                 <p class="ss-pt-2">
-                    We will add customization options for this shortcode in the future.
+                    We will add customization options for this shortcode in the near future.
                 </p>
                 <a class="button button-purple" href="https://app.shattersearch.com/biz"><i class="fas fa-tachometer-alt"></i> &nbsp;Manage Your Photos</a>
             </div>
