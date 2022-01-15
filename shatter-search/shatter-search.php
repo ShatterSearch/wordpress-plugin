@@ -13,7 +13,7 @@
  * @package           Shatter_Search
  *
  * @wordpress-plugin
- * Plugin Name:       Shatter Search For WordPress
+ * Plugin Name:       Shatter Search Store Locator
  * Plugin URI:        http://biz.shattersearch.com/wordpress-plugin-for-cannabis-brands
  * Description:       Provides a store locator and product drops for cannabis extract brands
  * Version:           1.0.1

@@ -1,114 +1,106 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
-Tags: comments, spam
+=== Shatter Search ===
+Contributors: shattersearch
+Tags: cannabis, store locator, product drops, cannabis brand, extracts
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Requires PHP: 5.6
+Donate link: https://shattersearch.com
+Tested up to: 5.8.3
+Stable tag: 5.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+The Shatter Search plugin is for cannabis extract brands! Easily publish your product drops and a store locator on
+your website!
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+We offer web services for cannabis brands!
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+👋 hello@shattersearch.com
 
-A few notes about the sections above:
+Our mission is to become a leading provider of web services & software created specifically for cannabis extract brands.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+Getting started should be pretty easy, but we're here to help if you want a hand.
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+Contact Shatter Search support through our [Support Center](https://shattersearch.com/support) or email help@shattersearch.com
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+### Enhanced Store Locator
+* Manage your list of retailers through our [Brand Control Panel on ShatterSearch](https://shattersearch.com/register)
+* We keep your retailer information up-to-date  (logo, phone number, website, social media, etc)
+* Display photos of recent extracts available at your retailers
+* Shatter Search staff will add photos from social media channels when possible
+* Our widget (optionally) puts this information in a "bubble" on every page of your website.
+* Your store locator is syndicated on [our website](https://shattersearch.com) and mobile apps.
+
+### Drops Publication
+* Build hype around your "product drops"
+* Let your customers know **what products** are available **where**
+* Optionally attach photos to each product drop
+* Allow your customers to subscribe to notifications of new product drops
+* Our widget (optionally) puts this information in a "bubble" on every page of your website.
+* Your product drops are syndicated on [our website](https://shattersearch.com) and mobile apps.
+
+### Product Photos
+* Display photos and videos of recent extracts that you've produced
+* Optionally tag the retailer they were distributed to
+* Optionally, we can help curate photos from social media (when possible)
+
+
+### The Bubble
+* Gives your customers easy access to a list of retailers and product drops in a "bubble".
+* Displayed on every page of your website (or not, if you prefer)
+* Starts minimized and expands when clicked (by default)
+* Highly customizable
+
+### Shortcodes
+This plugin adds several shortcodes to your WordPress that allow you to add the above-mentioned features to your website.
+
+* `[ss-retailers]` - displays your store locator.
+* `[ss-states]` - optionally displays a list of states where your products are sold
+* `[ss-retailer-count]` - inserts the number of retailers that carry your product into the page
+* `[ss-drops]` - inserts a full list of recent product drops into the page
+* `[ss-photos]` - displays recent product photos.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload `shatter-search.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('shatter_search_hook'); ?>` in your templates
+* Upload the `shatter-search` directory to the `wp-content/plugins` directory
+* Activate the plugin through the 'Plugins' menu in WordPress
+* Enter your Shatter Search API keys
+* Add the shortcodes to your website.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Who is this plugin intended for? =
 
-An answer to that question.
+This plugin is intended for legal brands that manufacture cannabis extracts (vape pens, wax, solventless extracts, CBD products, etc) for legal markets.
 
-= What about foo bar? =
+It's also great for legal dispensaries and delivery services that carry cannabis extract products.
 
-Answer to foo bar dilemma.
+= Why use this plugin? =
+
+This plugin adds or enhances functionality on your website that helps connect your customers with the retailers that carry your products.
+
+You can build a relatively "dumb" website.  Let us handle the heavy lifting.
+
+We help curate photos of your products shared on social media by your customers and retailers.
+
+We syndicate information about your brand through our website, mobile apps, and social media channels.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. The plugin adds a powerful store locator to your website
+2. You can easily publish your product drops
+3. "The Bubble" optionally appears on the bottom of every webpage
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+= 1.0.1 =
+* Design improvements
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+= 1.0.0 =
+* Initial Plugin
 
 == Upgrade Notice ==
 
 = 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+Shortcode design enhancements

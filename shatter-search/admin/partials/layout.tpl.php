@@ -16,8 +16,7 @@
     <div class="ss-header">
         <img src="https://assets.shattersearch.com/a/logo/logo.svg" /> 
         <div>
-            <h1>Shatter Search</h1>
-            <span>WordPress Plugin For Cannabis Brands</span>
+            <h1 class="ss-mb-0">Shatter Search</h1>
         </div>
     </div>
     <div class="ss-cols">
