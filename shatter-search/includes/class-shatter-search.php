@@ -96,7 +96,7 @@ class Shatter_Search {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
-
+		add_action('shatter_search_sync_data', array('SHATTER_SEARCH_SYNC', 'sync_plugin_data'));
 		add_action('plugins_loaded', array($this, 'check_shatter_search_version'));	
 	}
 
@@ -155,6 +155,15 @@ class Shatter_Search {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shatter-search-shortcodes.php';
 
+
+
+		/**
+		 * The class responsible for sync 
+		 * side of the site.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shatter-search-sync.php';
+
+		
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.

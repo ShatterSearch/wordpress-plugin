@@ -46,6 +46,7 @@
 				baseStyles: true,
 				pluginVersion: pluginVersion,
 				apiKey: 'SS-' + apiKey,
+				wordpress: true,
 				serviceBaseUrl: serviceBaseUrl
 			});
 		}

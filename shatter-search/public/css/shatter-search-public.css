@@ -1,4 +1,424 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+@media (min-width: 992px) {
+    .ss-photo-cards{
+        display: flex;
+    }
+}
+.ss-photo-cards{
+    align-items: flex-start;
+    margin-left: -7px;
+    margin-right: -7px;
+}
+.ss-photo-card{
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    border-radius: 7px;
+}
+.ss-photo-card img{
+    width: 100%;
+    height:auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.ss-photo-body{
+    padding:20px;
+}
+h3.ss-photo-heading {
+    margin:0px;
+}
+h3.ss-photo-heading span{
+    font-weight: light;
+    display: block;
+}
+.ss-photo-store{
+    background: #fafafa;
+    display:flex;
+    padding: 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.ss-photo-store-info{
+    width:100%;
+}
+.ss-photo-store-info h3 {
+    margin:0px;
+    font-size: 16px;
+    font-weight:bold;
+}
+.ss-photo-store-info p {
+    font-size: 14px;
+    margin: 5px 0px 0px 0px;
+}
+.ss-photo-logo-wrapper{
+    margin:0px;
+    width: 20%;
+}
+.ss-photo-logo-wrapper img{
+    width: 100%;
+    height:auto;
+    margin:0px;
+}
+.ss-photo-directions-link{
+    font-size: 10px;
+    line-height: 1;
+    text-decoration: none;
+    padding: 3px 5px;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+.ss-photo-directions-link:hover{
+    background: #000;
+    color:#fff;
+    border: 1px solid #000;
+    text-decoration: none;
+}
+.ss-state-list {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0px;
+}
+.ss-state-list li {
+    margin: 7px 15px 7px 0;
+    padding: 0px;
+    display: inline-block;
+}
+.ss-state-list li a {
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 2px solid #000;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #efefef;
+    text-align: center;
+    border-radius: 5px !important;
+}
+.ss-state-list li a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+.ss-state {
+    scroll-margin-top: 10px;
+    margin-top: 20px;
+}
+.ss-state h1 {
+    font-size: 1.8em;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding-left: 20px;
+    line-height: 50px;
+    height: 50px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.ss-state .ss-cities {
+    width: 100%;
+    margin-top: -25px;
+    padding: 45px 20px 20px 20px;
+    background: rgb(255, 255, 255);
+}
+.ss-state .ss-cities a {
+    font-size: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px 8px 3px 8px;
+
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+.ss-state .ss-cities a:hover {
+    background: #212529;
+    color: #fff;
+}
+.ss-warning-bg {
+    background: #333;
+    color: #fff;
+}
+.ss-pale-bg {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.ss-retailers * {
+    box-sizing: border-box;
+}
+
+.ss-city-header {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: between;
+}
+.ss-city-header a {
+    text-align: center;
+    line-height: 1;
+    color: #000;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-left: 12px;
+}
+.ss-city-header svg {
+    width: 13px;
+    color: #666;
+}
+.ss-city-header h5 {
+    width: 100%;
+    scroll-margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background: #212529;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 6px 9px 6px 9px;
+    display: inline-block;
+}
+.ss-store-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    margin-left: -7px;
+    margin-right: -7px;
+}
+
+.ss-store-row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+}
+.ss-store {
+    padding: 7px;
+}
+.ss-store > * {
+    padding: 1em;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    min-height: 100px;
+}
+
+.ss-store-avatar {
+    width: 30%;
+}
+.ss-expanded {
+    margin-top: 8px;
+    font-size: 12px;
+}
+.ss-expanded img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.ss-store .ss-store-main {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    clear: both;
+    color: #333;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.ss-store-logo {
+    width: 20%;
+}
+.ss-store-logo-wrapper {
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+.ss-store-logo-wrapper img {
+    width: 100%;
+    height: auto;
+}
+.ss-store-info {
+    width: 100%;
+}
+.ss-store-info h3 {
+    color: #000 !important;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+.ss-store-address {
+    font-size: 75%;
+    line-height: 1.75;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.ss-store-phone {
+    font-size: 75%;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.ss-state-header {
+    display: flex;
+    align-items: center;
+}
+.ss-state-header:before {
+    width: 35px;
+    height: 5px;
+    content: "";
+    background: #000;
+}
+.ss-state-header:after {
+    width: 100%;
+    height: 5px;
+    content: "";
+    background: #000;
+}
+
+@media (min-width: 992px) {
+    /* lg
+    .ss-state .ss-cities{
+        width: 75%;
+    }*/
+    .ss-store {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .ss-store-logo {
+        width: 15%;
+    }
+}
+.ss-drop{
+    margin-bottom: 15px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+.ss-drop-heading{
+    text-decoration: none;
+    color: #fff !important;
+    display:flex;
+    align-items: flex-start;
+    clear: both;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family 'Montserrat', sans-serif;
+    background: #212529;
+    padding: 20px;
+    margin: 0px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+.ss-drop-heading-info{
+    width:100%;
+}
+.ss-drop-heading-logo{
+}
+.ss-drop-heading-tags{
+    display:flex;
+    margin-bottom:20px;
+    justify-content: between;
+    font-size: 50%;
+}
+.ss-drop-heading-time{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin-bottom: 5px;
+    display:block;
+}
+h3.ss-drop-retailer-name{
+    color:#fff;
+    font-weight:bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+p.ss-drop-retailer-address{
+    font-size: 75%;
+    margin:0px;  
+}
+p.ss-drop-retailer-phone{
+    font-size:75%;
+    margin:7px 0px 0px 0px;
+    font-weight: bold;
+}
+.ss-drop-items{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: #fff;
+    margin-bottom: 25px;
+}
+.ss-drop-items-row{
+    display: flex;
+    flex-wrap: wrap;
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 0;
+}
+.ss-drop-item-col{
+    width:100%;
+    padding: 15px;
+    display:flex;
+    align-items: flex-start;
+}
+@media (min-width: 992px){
+    .ss-drop-item-col{
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .ss-drop-item-photo{
+        width: 10%;
+    }
+}
+h5.ss-drop-item-info{
+    width: 100%;
+    margin:0px;
+    line-height: 1;
+    padding: 5px 5px 5px 15px;
+}
+h5.ss-drop-item-info span:first-child{
+    font-weight:bold;
+    display:block;
+    margin-bottom: 4px;
+}
+h5.ss-drop-item-info span:last-child{
+    font-size: 75%;
+    color: #484a4d;
+}
+.ss-drop-item-photo{
+    width: 25%;
+}
+.ss-drop-item-photo img{
+    width: 100%;
+    height:auto;
+    border-radius: 7px;
+}

@@ -4,8 +4,8 @@
  * Handles shortcodes
  *
  * @since      1.0.1
- * @package    Sports_Data
- * @subpackage Sports_Data/includes
+ * @package    Shatter_Search
+ * @subpackage Shatter_Search/includes
  * @author     Hypertext Media <nchandranatha@gmail.com>
  */
 class Shatter_Search_Shortcodes
@@ -18,7 +18,7 @@ class Shatter_Search_Shortcodes
 	 * @access   private
 	 * @var      string    $shatter_search    The ID of this plugin.
 	 */
-	private $sports_data;
+	private $shatter_search;
 
 	/**
 	 * The version of this plugin.
@@ -31,10 +31,16 @@ class Shatter_Search_Shortcodes
 
 
 
+	private $processedRetailerIDS = [];
+	private $processedDropIDS = [];
+	private $processedDropItemIDS = [];
 
-	public function __construct($sports_data, $version)
+
+
+
+	public function __construct($shatter_search, $version)
 	{
-		$this->sports_data = $sports_data;
+		$this->shatter_search = $shatter_search;
 		$this->version = $version;
 	}
 
@@ -42,26 +48,45 @@ class Shatter_Search_Shortcodes
         $content = '<div id="ssRetailers"></div>';
         global $wpdb;
 
+		ob_start();
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-retailers-shortcode.php';
+        $content=ob_get_contents(); 
+        ob_end_clean();
+
         return $content;
     }
 
     public static function states_shortcode(){
-        $content = '<div id="ssStates"></div>';
-        global $wpdb;
+		global $wpdb;
+		
+
+		ob_start();
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-states-shortcode.php';
+        $content=ob_get_contents(); 
+        ob_end_clean();
 
         return $content;
     }
-    
+	
+
     public static function drops_shortcode(){
-        $content = '<div id="ssDrops"></div>';
         global $wpdb;
+
+		ob_start();
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-drops-shortcode.php';
+        $content=ob_get_contents(); 
+        ob_end_clean();
 
         return $content;
     }
 
     public static function photos_shortcode(){
-        $content = '<div id="ssPhotos"></div>';
-        global $wpdb;
+		global $wpdb;
+
+		ob_start();
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/shatter-search-photos-shortcode.php';
+        $content=ob_get_contents(); 
+        ob_end_clean();
 
         return $content;
     }

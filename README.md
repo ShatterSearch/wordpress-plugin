@@ -41,11 +41,14 @@ This plugin is still in development.  Development roadmap:
 * ~Admin dashbaord - Bubble~
 * ~Bubble implementation~
 * ~Temporary shortcode implementation~
-* Data Sync
-* Final Shortcodes
-* Product drops
-* Store locator
-* Product photos
+* ~Data Sync~
+* ~Final Shortcodes~
+* ~Product drops~
+* ~Store locator~
+* ~Product photos~
+* Force data sync button
+* General configuration options
+* Frequently Asked Questions
 * Wordpress Plugin submission
 
 # All Implementation Options

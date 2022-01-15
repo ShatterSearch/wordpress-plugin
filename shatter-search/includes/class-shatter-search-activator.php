@@ -37,15 +37,15 @@ class Shatter_Search_Activator {
 		$retailers = $wpdb->base_prefix . "ss_retailers";
 		$retailers_sql = "CREATE TABLE $retailers (
 			`id` INT(11) NOT NULL AUTO_INCREMENT,
-			`name` VARCHAR(255) NOT NULL,
-			`url` VARCHAR(255) NOT NULL,
-			`logo` VARCHAR(255) NOT NULL,
-			`active` INT(1) NOT NULL DEFAULT '0',
-			`address` VARCHAR(255) NOT NULL,
-			`city` VARCHAR(50) NOT NULL,
-			`state` VARCHAR(50) NOT NULL,
-			`zip` INT(5) NOT NULL,
-			`phone` VARCHAR(50) NOT NULL,
+			`name` VARCHAR(255) NULL,
+			`url` VARCHAR(255) NULL,
+			`logo` VARCHAR(255) NULL,
+			`active` INT(1) NULL DEFAULT '0',
+			`address` VARCHAR(255) NULL,
+			`city` VARCHAR(50) NULL,
+			`state` VARCHAR(50) NULL,
+			`zip` INT(5) NULL,
+			`phone` VARCHAR(50) NULL,
 			PRIMARY KEY (id)
 		) $charset_collate;";
 		dbDelta($retailers_sql);
@@ -54,10 +54,10 @@ class Shatter_Search_Activator {
 		$drops = $wpdb->base_prefix . "ss_drops";
 		$drops_sql = "CREATE TABLE $drops (
 			`id` INT(11) NOT NULL AUTO_INCREMENT,
-			`name` VARCHAR(255) NOT NULL,
+			`name` VARCHAR(255) NULL,
 			`created_at` TIMESTAMP NULL,
-			`retailer_id` VARCHAR(255) NOT NULL,
-			`active` INT(1) NOT NULL DEFAULT '0',
+			`retailer_id` VARCHAR(255) NULL,
+			`active` INT(1) NULL DEFAULT '0',
 			PRIMARY KEY (id)
 		) $charset_collate;";
 		dbDelta($drops_sql);
@@ -65,16 +65,20 @@ class Shatter_Search_Activator {
 		$drop_items = $wpdb->base_prefix . "ss_drop_items";
 		$drop_items_sql = "CREATE TABLE $drop_items (
 			`id` INT(11) NOT NULL AUTO_INCREMENT,
-			`drop_id` INT(11) NOT NULL,
-			`strain` VARCHAR(255) NOT NULL,
-			`type` VARCHAR(255) NOT NULL,
-			`image` VARCHAR(255) NOT NULL,
+			`drop_id` INT(11) NULL,
+			`strain` VARCHAR(255) NULL,
+			`type` VARCHAR(255) NULL,
+			`image` VARCHAR(255) NULL,
+			`retailer_id` VARCHAR(255) NULL,
 			PRIMARY KEY (id)
 		) $charset_collate;";
 		dbDelta($drop_items_sql);
 
 		update_option('ss_version', SHATTER_SEARCH_VERSION);
 
+		if ( ! wp_next_scheduled( 'shatter_search_sync_data' ) ) {
+			wp_schedule_event( time(), 'hourly', 'shatter_search_sync_data' ); // plugin_cron_refresh_cache is a hook
+	   	}
 	}
 
 }
