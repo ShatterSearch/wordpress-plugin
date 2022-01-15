@@ -102,7 +102,7 @@ function right(){
                             </div>  
                         </div>
                         <div class="ss-right">
-                            <input autocomplete="on" required type="text" name="secretApiKey" placeholder="eg: 748216db-fc2f-40e2-ba85-af9aa0c105c2" />
+                            <input autocomplete="on" required type="text" name="secretApiKey" placeholder="eg: 1a3b5c7d-1a2b-3c4d-5d6f-7g8h9i0j1k2l" />
                         </div>
                     </div>
 
