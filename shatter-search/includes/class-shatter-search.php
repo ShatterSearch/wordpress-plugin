@@ -96,6 +96,7 @@ class Shatter_Search {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
+		add_action('shatter_search_reset_plugin', array('SHATTER_SEARCH_SYNC', 'reset_plugin_data'));
 		add_action('shatter_search_sync_data', array('SHATTER_SEARCH_SYNC', 'sync_plugin_data'));
 		add_action('plugins_loaded', array($this, 'check_shatter_search_version'));	
 	}
@@ -218,6 +219,7 @@ class Shatter_Search {
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'shatter_search_menu' );
 		$this->loader->add_action( 'admin_post_initial_setup', $plugin_admin, 'admin_post_initial_setup' );
 		$this->loader->add_action( 'admin_post_manual_sync', $plugin_admin, 'admin_post_manual_sync' );
+		$this->loader->add_action( 'admin_post_reset_plugin', $plugin_admin, 'admin_post_reset_plugin' );
 		
 	}
 

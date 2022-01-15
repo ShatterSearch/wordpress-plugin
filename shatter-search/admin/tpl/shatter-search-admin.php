@@ -146,7 +146,7 @@ function right($stats){
                 </p>
                 <ul class="ss-w-100 ss-w-lg-75 ss-mt-3">
                     <li>
-                        <a class="ss-link-unstyled" href="#">
+                        <a class="ss-link-unstyled" href="' . admin_url('admin.php?page=manage-shatter-search-store-locator') . '">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -159,7 +159,7 @@ function right($stats){
                         </a>
                     </li>
                     <li>
-                        <a class="ss-link-unstyled" href="#">
+                        <a class="ss-link-unstyled" href="' . admin_url('admin.php?page=manage-shatter-search-product-drops') . '">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -172,7 +172,7 @@ function right($stats){
                         </a>
                     </li>
                     <li class="ss-mb-0">
-                        <a class="ss-link-unstyled" href="#">
+                        <a class="ss-link-unstyled" href="' . admin_url('admin.php?page=manage-shatter-search-product-photos') . '">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -192,7 +192,7 @@ function right($stats){
             <div class="ss-px-4 ss-mt-3">
                 <ul class="ss-w-100 ss-w-lg-75 ">
                     <li class="ss-mb-0">
-                        <a class="ss-link-unstyled" href="#">
+                        <a class="ss-link-unstyled" href="' . admin_url('admin.php?page=manage-shatter-search-bubble') . '">
                             <div class="ss-px-3">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
@@ -253,8 +253,19 @@ function right($stats){
                         class="button button-purple"
                     >
                         Manually Sync Data
-                    </button>
+                    </button> 
                 </form>
+
+                <div class="ss-mt-3">
+                    <p><b>Having Problems?</b> Try resetting the plugin by clicking the button below.</p>
+                    <p>Warning: This will clear all plugin settings and the plugin\'s database. You\'ll need to re-enter your API keys.</p>
+                </div>
+                <form id="resetPlugin" style="border:none; box-shadow:none;" action="' . admin_url('admin-post.php') . '" method="post">
+                    <input type="hidden" name="action" value="reset_plugin">
+                    <button class="button">Reset Plugin</button>
+                </form>
+                
+                
             </div>
         </div>
 

@@ -34,6 +34,18 @@ class Shatter_Search_Activator {
 		$charset_collate = $wpdb->get_charset_collate();
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
+		self::createSchema();
+
+		update_option('ss_version', SHATTER_SEARCH_VERSION);
+
+		if ( ! wp_next_scheduled( 'shatter_search_sync_data' ) ) {
+			wp_schedule_event( time(), 'hourly', 'shatter_search_sync_data' ); // plugin_cron_refresh_cache is a hook
+	   	}
+	}
+	public static function createSchema(){
+		global $wpdb;
+		$charset_collate = $wpdb->get_charset_collate();
+
 		$retailers = $wpdb->base_prefix . "ss_retailers";
 		$retailers_sql = "CREATE TABLE $retailers (
 			`id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -74,11 +86,7 @@ class Shatter_Search_Activator {
 		) $charset_collate;";
 		dbDelta($drop_items_sql);
 
-		update_option('ss_version', SHATTER_SEARCH_VERSION);
-
-		if ( ! wp_next_scheduled( 'shatter_search_sync_data' ) ) {
-			wp_schedule_event( time(), 'hourly', 'shatter_search_sync_data' ); // plugin_cron_refresh_cache is a hook
-	   	}
+		return;
 	}
 
 }

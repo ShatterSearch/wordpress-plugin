@@ -28,5 +28,11 @@
 	 * Although scripts in the WordPress core, Plugins and Themes may be
 	 * practising this, we should strive to set a better example in our own work.
 	 */
-
+	$(function() {
+		$('#resetPlugin').submit(function(event){
+			if(!confirm("Are you sure?  You'll need to re-enter your API keys after the plugin resets.")){
+				event.preventDefault();
+			}
+		});
+	});
 })( jQuery );

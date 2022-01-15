@@ -217,6 +217,12 @@ class Shatter_Search_Admin {
 		wp_redirect(admin_url('admin.php?page=manage-shatter-search&status=setup-complete'));
 		return;
 	}
+	public function admin_post_reset_plugin () {
+		$sync = new Shatter_Search_Sync($this->shatter_search, $this->version);
+		$sync->reset_plugin_data();
+		wp_redirect(admin_url('admin.php?page=manage-shatter-search-setup'));
+		return;
+	}
 	public function admin_post_initial_setup(){
 		if(!empty($_POST['apiKey']) && !empty($_POST['secretApiKey'])){
 
@@ -260,7 +266,9 @@ class Shatter_Search_Admin {
 						if(!empty($response->billing_status)){
 							update_option('ss_billing_status', $response->billing_status);
 						}
-
+						$sync = new Shatter_Search_Sync($this->shatter_search, $this->version);
+						$sync->sync_plugin_data();
+						
 						wp_redirect(admin_url('admin.php?page=manage-shatter-search&status=setup-complete'));
 						exit(); //always remember to add this after wp_redirect()
 

@@ -101,3 +101,4 @@ function right(){
 $templateFile = file_get_contents(plugin_dir_path( dirname( __FILE__ ) ) . 'partials/layout.tpl.php');
 $template = str_replace('{left}', left(), $templateFile);
 $template = str_replace('{right}', right(), $template);
+print $template;

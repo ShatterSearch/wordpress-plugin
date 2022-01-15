@@ -38,6 +38,41 @@ class Shatter_Search_Sync
 		$this->version = $version;
 	}
 
+	public function reset_plugin_data(){
+		global $wpdb;
+		$options = [
+			'ss_entity_type',
+			'ss_api_key',
+			'ss_secret_api_key',
+			'ss_store_id',
+			'ss_brand_id',
+			'ss_store_name',
+			'ss_brand_name',
+			'ss_billing_status',
+			'ss_updated_at',
+		];
+		foreach($options as $option){
+			if(!empty(get_option($option))){
+				delete_option($option);
+			}
+		}
+		$tables = [
+			$wpdb->prefix . 'ss_retailers',
+			$wpdb->prefix . 'ss_drops',
+			$wpdb->prefix . 'ss_drop_items',
+		];
+		foreach($tables as $table){
+			$wpdb->query( "DROP TABLE IF EXISTS " . $table );
+
+		}
+		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		require_once plugin_dir_path( __FILE__ ) . 'class-shatter-search-activator.php';
+		Shatter_Search_Activator::createSchema();
+
+		wp_redirect(admin_url('admin.php?page=manage-shatter-search-setup'));
+		exit;
+		return;
+	}
     public function sync_plugin_data(){
 		global $wpdb;
 		
