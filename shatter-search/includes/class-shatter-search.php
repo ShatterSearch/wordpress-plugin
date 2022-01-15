@@ -118,6 +118,7 @@ class Shatter_Search {
 		if(empty($currentVersion)){
 			update_option('ss_version', $this->version);
 		}else if (SHATTER_SEARCH_VERSION !== $currentVersion) {
+			require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shatter-search-updater.php';
 			$this->updater = new Shatter_Search_Updater();
 			$this->updater->update(SHATTER_SEARCH_VERSION, $this->version);
 			update_option('ss_version', $this->version);
