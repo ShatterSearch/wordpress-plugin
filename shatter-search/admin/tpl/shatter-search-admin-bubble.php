@@ -84,7 +84,7 @@ function left(){
     ';
 }
 function right($imgPath){
-    return '
+    $returnString = '
         <div class="ss-card faded ">
             <h3>The Bubble</h3>
             <div class="ss-px-4">
@@ -98,13 +98,41 @@ function right($imgPath){
                     The Bubble works on both desktop browsers and mobile devices and is displayed on the bottom of the screen.
                     By default, The Bubble is minimized and expands when clicked.
                 </p>
-                <p class="ss-mt-2">
+                <div style="padding:20px; border-radius: 0.25rem; border: 2px solid #ccc;">
+    ';
+    if(get_option('ss_bubble_disabled')){
+        $returnString .= '
+            <b class=" ss-d-block">The Bubble Is <span style="color:#ff0000;">Disabled</span></b>
+            <p class="ss-mb-0 ss-mt-2">
+                Click the button below to enable the bubble.
+            </p>
+            <form style="margin-top: 10px;border:none; box-shadow:none;" action="' . admin_url('admin-post.php') . '" method="post">
+                <input type="hidden" name="action" value="enable_button">
+                <button class="button button-purple">Enable Button</button>
+            </form>
+        ';
+    }else{
+        $returnString .= '
+        <b class=" ss-d-block">The Bubble Is <span style="color:green;">Enabled</span></b>
+        <p class="ss-mb-0 ss-mt-2">
+                Click the button below to turn off the bubble.
+            </p>
+            <form style="margin-top: 10px;border:none; box-shadow:none;" action="' . admin_url('admin-post.php') . '" method="post">
+                <input type="hidden" name="action" value="disable_button">
+                <button class="button button-purple">Disable Button</button>
+            </form>
+        ';
+    }
+    $returnString .= '
+                </div>
+                <p class="ss-mt-3">
                     Customization options for The Bubble are coming soon.
                 </p>
                 <img src="' .  $imgPath . '/bubble.png" class="ss-preview-image">
             </div>
         </div>
     ';
+    return $returnString;
 }
 
 $templateFile = file_get_contents(plugin_dir_path( dirname( __FILE__ ) ) . 'partials/layout.tpl.php');

@@ -220,6 +220,8 @@ class Shatter_Search {
 		$this->loader->add_action( 'admin_post_initial_setup', $plugin_admin, 'admin_post_initial_setup' );
 		$this->loader->add_action( 'admin_post_manual_sync', $plugin_admin, 'admin_post_manual_sync' );
 		$this->loader->add_action( 'admin_post_reset_plugin', $plugin_admin, 'admin_post_reset_plugin' );
+		$this->loader->add_action( 'admin_post_disable_button', $plugin_admin, 'admin_post_disable_button' );
+		$this->loader->add_action( 'admin_post_enable_button', $plugin_admin, 'admin_post_enable_button' );
 		
 	}
 

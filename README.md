@@ -50,7 +50,7 @@ This plugin is still in development.  Development roadmap:
 * ~Fix shortcode rendering~
 * ~Shortcode attributes~
 * ~Troubleshooting (plugin reset)~
-* General configuration options
+~ *General configuration options~
 * Frequently Asked Questions
 * Wordpress Plugin submission
 

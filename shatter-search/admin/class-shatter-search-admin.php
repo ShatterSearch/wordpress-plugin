@@ -217,10 +217,23 @@ class Shatter_Search_Admin {
 		wp_redirect(admin_url('admin.php?page=manage-shatter-search&status=setup-complete'));
 		return;
 	}
+	public function admin_post_enable_button(){
+		delete_option('ss_bubble_disabled');
+		wp_redirect(admin_url('admin.php?page=manage-shatter-search-bubble'));
+		exit;
+		return;
+	}
+	public function admin_post_disable_button(){
+		update_option('ss_bubble_disabled', true);
+		wp_redirect(admin_url('admin.php?page=manage-shatter-search-bubble'));
+		exit;
+		return;
+	}
 	public function admin_post_reset_plugin () {
 		$sync = new Shatter_Search_Sync($this->shatter_search, $this->version);
 		$sync->reset_plugin_data();
 		wp_redirect(admin_url('admin.php?page=manage-shatter-search-setup'));
+		exit;
 		return;
 	}
 	public function admin_post_initial_setup(){
